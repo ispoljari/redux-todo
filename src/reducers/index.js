@@ -6,7 +6,7 @@ import {
   ADD_TODO,
   TOGGLE_TODO } from '../actions';
 
-const todos = (state=[], action) => {
+export const todos = (state=[], action) => {
   switch(action.type) {
     case ADD_TODO:
       return [
@@ -30,7 +30,7 @@ const todos = (state=[], action) => {
   }
 }
 
-const visibilityFilter = (state = VisibilityFilters.SHOW_ALL, action) => {
+export const visibilityFilter = (state = VisibilityFilters.SHOW_ALL, action) => {
   switch(action.type) {
     case SET_VISIBILITY_FILTER:
       return action.filter;
